@@ -1,0 +1,19 @@
+.customer-layout-wrapper {
+  background-color: var(--background-color);
+
+  .customer-layout-container {
+    width: 1270px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .main-content {
+    display: flex;
+    gap: 17px;
+    .layout-content {
+      flex: 1 1 0%;
+      margin-top: 40px;
+    }
+  }
+}

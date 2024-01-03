@@ -1,0 +1,99 @@
+.create-address-wrapper {
+  width: 100%;
+  .heading {
+    font-size: 19px;
+    line-height: 21px;
+    font-weight: 300;
+    margin: 20px 0px 15px;
+  }
+  .inner {
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+    min-height: 400px;
+    padding: 30px 20px;
+    form {
+      width: 600px;
+      .form-control {
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        margin: 0px 0px 15px;
+        .input-label {
+          width: 110px;
+          min-width: 110px;
+          font-size: 13px;
+          color: rgb(51, 51, 51);
+        }
+        div {
+          display: flex;
+          flex: 1 1 0%;
+          position: relative;
+          z-index: 1;
+          .type-input {
+            flex: 1 1 0%;
+            transition: border-color 0.15s ease-in-out 0s,
+              box-shadow 0.15s ease-in-out 0s,
+              -webkit-box-shadow 0.15s ease-in-out 0s;
+            border: 1px solid rgb(204, 204, 204);
+            border-radius: 4px;
+            height: 34px;
+            padding: 6px 12px;
+            line-height: 34px;
+            outline: none;
+          }
+          textarea {
+            border: 1px solid rgb(204, 204, 204);
+            border-radius: 4px;
+            width: 100%;
+            padding: 6px 12px;
+          }
+        }
+        select {
+          width: 100%;
+          border: 1px solid rgb(204, 204, 204);
+          height: 34px;
+          padding: 6px 12px;
+          line-height: 34px;
+          outline: none;
+          background: 0px center;
+          border-radius: 4px;
+          box-shadow: none;
+        }
+        .styled-radio {
+          display: flex;
+          margin-right: 15px;
+          input {
+            flex: 1 1 0%;
+          }
+          .label {
+            font-size: 13px;
+            line-height: 20px;
+            display: flex;
+            -webkit-box-align: center;
+            align-items: center;
+          }
+        }
+        .styled-checkbox {
+          display: inline-block;
+          .label {
+            font-size: 14px;
+            line-height: 20px;
+            display: inline-block;
+            vertical-align: middle;
+            text-align: justify;
+          }
+        }
+        .btn-submit {
+          border: 0px;
+          width: 176px;
+          height: 40px;
+          border-radius: 4px;
+          color: rgb(74, 74, 74);
+          font-size: 14px;
+          background-color: rgb(253, 216, 53);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

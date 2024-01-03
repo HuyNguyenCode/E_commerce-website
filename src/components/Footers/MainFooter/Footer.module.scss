@@ -1,0 +1,118 @@
+.footer-wrapper {
+  background-color: var(--white-color);
+  .sm-customer-container,
+  .sm-container {
+    padding-top: 16px;
+
+    .information-content {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 0 16px;
+      .payment-block {
+        width: 15%;
+        .payment {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          grid-gap: 1px;
+          font-size: 12px;
+          line-height: 16px;
+          color: rgb(128, 128, 137);
+          margin-bottom: 12px;
+          margin-top: 0px;
+          .icon {
+            display: inline-block;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            vertical-align: middle;
+            width: 32px;
+            height: 32px;
+          }
+        }
+      }
+      .infor-block {
+        width: 20%;
+        .infor-heading {
+          font-size: 1.6rem;
+          line-height: 24px;
+          font-weight: 500;
+          color: rgb(56, 56, 61);
+          margin-bottom: 12px;
+          margin-top: 0px;
+        }
+        .download {
+          display: flex;
+          gap: 10px;
+        }
+        .socialBtn {
+          font-size: 12px;
+          line-height: 16px;
+          color: rgb(128, 128, 137);
+          margin-bottom: 12px;
+          margin-top: 0px;
+          a {
+            display: inline-block;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            vertical-align: middle;
+            width: 32px;
+            height: 32px;
+          }
+        }
+      }
+    }
+  }
+  .sm-customer-container {
+    width: 1270px;
+    margin: 0 auto;
+  }
+  .seperator {
+    content: " ";
+    height: 1px;
+    background-color: rgb(235, 235, 240);
+    width: 98%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .address-container {
+    padding: 16px 0px;
+    .addres-container {
+      display: flex;
+      align-items: center;
+    }
+  }
+  .about-container {
+    padding: 16px;
+    h1 {
+      font-size: 1.6rem;
+      line-height: 24px;
+      font-weight: 500;
+      color: rgb(56, 56, 61);
+      margin-bottom: 12px;
+      margin-top: 0px;
+    }
+    h2 {
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 500;
+      margin-bottom: 4px;
+      margin-top: 0px;
+      color: rgb(128, 128, 137);
+    }
+    p {
+      font-size: 12px;
+      line-height: 16px;
+      color: rgb(128, 128, 137);
+      margin-bottom: 12px;
+      margin-top: 0px;
+    }
+    a {
+      color: rgb(11, 116, 229);
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+  }
+}

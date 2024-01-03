@@ -1,0 +1,106 @@
+.delivery-area {
+  padding: 16px;
+  background-color: white;
+  margin-bottom: 12px;
+  .delivery-text {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    h3 {
+      color: rgb(128, 128, 137);
+      font-weight: normal;
+      margin: 0px;
+      color: #808089;
+      font-size: 16.38px;
+      line-height: 20px;
+    }
+    a {
+      color: rgb(11, 116, 229);
+      text-decoration: none;
+      font-size: 14px;
+      line-height: 20px;
+    }
+    .changeBtn {
+      cursor: pointer;
+    }
+  }
+  .delivery-user-infor {
+    display: flex;
+    align-items: center;
+    .delivery-phone-number {
+      color: rgb(56, 56, 61);
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 20px;
+    }
+    i {
+      display: block;
+      width: 1px;
+      height: 20px;
+      background-color: rgb(235, 235, 240);
+      margin: 0px 8px;
+    }
+    .delivery-name {
+      margin-bottom: 2px;
+    }
+  }
+
+  .delivery-name {
+    color: #38383d;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+  }
+
+  .delivery-address {
+    padding-bottom: 10px;
+    color: #808089;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: normal;
+  }
+}
+
+.promotion-area {
+  padding: 16px;
+  background-color: white;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  .promotion-text {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    span {
+      color: #242424;
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 20px;
+      text-transform: capitalize;
+    }
+    .promotion-selection {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #787878;
+      font-size: 13px;
+      line-height: 20px;
+      svg {
+        margin-left: 4px;
+      }
+    }
+  }
+  .promotion-choose {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    span {
+      color: #0b74e5;
+      font-size: 13px;
+      line-height: 20px;
+      font-weight: 500;
+      margin-left: 8px;
+    }
+  }
+}

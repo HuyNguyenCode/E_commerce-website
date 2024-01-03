@@ -1,0 +1,16 @@
+.layout-wrapper {
+    width: 100%;
+    background-color: var(--background-color);
+    .main-content {
+      display: flex;
+      gap: 24px;
+      padding-top: 16px;
+      .layout-content {
+        display: flex;
+        width: 81.5%;
+        flex-direction: column;
+        padding-top: 16px;
+      }
+    }
+  }
+  

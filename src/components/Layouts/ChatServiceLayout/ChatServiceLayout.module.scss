@@ -1,0 +1,9 @@
+.layout-wrapper {
+  width: 100%;
+  .container {
+    .layout-content {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

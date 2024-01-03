@@ -1,0 +1,65 @@
+//Json Order
+{
+      diliveryDate: " 20:42 06/11/2023",
+      orderId: 499612875,
+      ordersType: "Đã hủy",
+      orderDeliveryFee: 64000,
+      orderProducts: [
+        {
+          productName: "Apple iPhone 14 Pro Max 128GB Tím",
+          productImg:
+            "https://salt.tikicdn.com/cache/200x200/ts/product/11/13/de/d500a772339882fd6660b3004da9733c.jpg",
+          productPrice: 26590000,
+          productStore: "Tiki Trading",
+          productQuantity: 2,
+          skuNumber: 5576078619910,
+          productAmount: 53180000,
+        },
+        {
+          productName: "iPhone 15 Pro Max 512GB Titan Đen",
+          productImg:
+            "	https://salt.tikicdn.com/cache/200x200/ts/product/fa/1d/33/47edaa8f754e1c81d0b4ed4f7a5fb20a.png",
+          productPrice: 40990000,
+          productStore: "Tiki Trading",
+          productQuantity: 1,
+          skuNumber: 1524065755729,
+          productAmount: 40990000,
+        },
+        {
+          productName: "Apple iPhone 14 128GB Tím",
+          productImg:
+            "https://salt.tikicdn.com/cache/200x200/ts/product/40/5e/eb/4dcee6ceebbea004a14f212db4182b18.png",
+          productPrice: 18650000,
+          productStore: "Tiki Trading",
+          productQuantity: 1,
+          skuNumber: 1524065755729,
+          productAmount: 18650000,
+        },
+      ],
+      ordersAmount: 112884000,
+    },
+
+// Nhiều đơn
+let allOrders = [
+    
+    {
+      diliveryDate: "12:12 09/02/2022",
+      orderId: 530865910,
+      ordersType: "Giao hàng thành công",
+      orderDeliveryFee: 44000,
+      orderProducts: [
+        {
+          productName:
+            "Balo chống trộm cao cấp GUBAG chống thấm nước, có cổng sạc USB, thiết kế mới hiện đai, sang trọng, khóa số nâng cấp, bảo mật tốt hơn - Đen",
+          productImg:
+            "	https://salt.tikicdn.com/cache/200x200/ts/product/56/f0/f3/e7cf9f7058e8db1b3967f4c7490ea2d2.jpg",
+          productPrice: 439000,
+          productStore: "Gu Bag Official Store",
+          productQuantity: 1,
+          skuNumber: 9346158872379,
+          productAmount: 469000,
+        },
+      ],
+      ordersAmount: 513000,
+    },
+  ];

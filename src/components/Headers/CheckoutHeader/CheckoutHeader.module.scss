@@ -1,0 +1,52 @@
+.header-wrapper {
+  background-color: var(--white-color);
+  padding: 8px 0px;
+  .container {
+    width: 1270px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    .header-content {
+      display: flex;
+      height: 100%;
+      width: 100%;
+      gap: 48px;
+      .left-content {
+        flex: 1 1 0%;
+        display: flex;
+        align-items: center;
+        .divider {
+          width: 1px;
+          height: 32px;
+          background-color: var(--primary);
+          margin: 0px 16px;
+          display: block;
+        }
+
+        .title {
+          font-weight: 400;
+          font-size: 24px;
+          line-height: 32px;
+          color: rgb(26, 167, 255);
+        }
+
+        .header-logo {
+          width: 72px;
+          height: 72px;
+          background: url("https://salt.tikicdn.com/ts/upload/c1/64/f7/4e6e925ea554fc698123ea71ed7bda26.png")
+            center center no-repeat;
+          cursor: pointer;
+          background-size: contain;
+        }
+      }
+
+      .right-content {
+        flex: 1 1 0%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+    }
+  }
+}

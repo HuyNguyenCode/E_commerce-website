@@ -1,0 +1,9 @@
+.layout-wrapper {
+  width: 100%;
+  background-color: var(--background-color);
+  .layout-content {
+    display: flex;
+    flex-direction: column;
+    padding-top: 16px;
+  }
+}
