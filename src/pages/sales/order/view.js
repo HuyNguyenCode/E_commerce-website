@@ -2,7 +2,7 @@ import CustomerLayout from "@/components/Layouts/CustomerLayout";
 import styles from "./view.module.scss";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-
+import { currencyFormat } from "@/currency/currency.module";
 import className from "classnames/bind";
 const cx = className.bind(styles);
 
@@ -10,11 +10,6 @@ function OrderDetail() {
   const router = useRouter();
   const orderObject = JSON.parse(router.query.orderObject);
   console.log(orderObject);
-
-  const currencyFormat = (num) => {
-    return num.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.") + " ₫";
-  };
-
   const [temporaryPrice, setTemporaryPrice] = useState();
   useEffect(() => {
     let sum = 0;

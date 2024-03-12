@@ -2,12 +2,9 @@ import CheckoutLayout from "@/components/Layouts/CheckoutLayout";
 import styles from "./success.module.scss";
 import classNames from "classnames/bind";
 import { useRouter } from "next/router";
-
+import { currencyFormat } from "@/currency/currency.module";
 const cx = classNames.bind(styles);
 function Success() {
-  const currencyFormat = (num) => {
-    return num.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.") + " ₫";
-  };
   const router = useRouter();
   const array = router.query.array;
   const listItems = JSON.parse(array);

@@ -4,6 +4,7 @@ import classNames from "classnames/bind";
 import CartDelivery from "@/container/Cart/CartDelivery";
 import Promotion from "@/container/Cart/Promotion";
 import { useRouter } from "next/router";
+import { currencyFormat } from "@/currency/currency.module";
 import { useEffect, useState } from "react";
 import { createOrder } from "@/redux/slice/orderReducer";
 import { useDispatch } from "react-redux";
@@ -27,9 +28,6 @@ function Payment() {
     setCheckedItems(arrItems);
   }, []);
 
-  const currencyFormat = (num) => {
-    return num.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.") + " ₫";
-  };
   const handlePlaceOrder = () => {
     console.log(checkedIdArr);
     dispatch(createOrder(checkedIdArr, 1));

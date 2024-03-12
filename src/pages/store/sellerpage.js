@@ -4,6 +4,7 @@ import classNames from "classnames/bind";
 import { useRouter } from "next/router";
 import { renderShopInfor } from "@/redux/slice/sellerReducer";
 import { useSelector, useDispatch } from "react-redux";
+import { currencyFormat } from "@/currency/currency.module";
 import { renderProsByShopId } from "@/redux/slice/productReducer";
 const cx = classNames.bind(styles);
 function sellerPage() {
@@ -29,9 +30,6 @@ function sellerPage() {
   const [pane, switchPane] = useState(1);
   const handleSwitchPane = (num) => {
     switchPane(num);
-  };
-  const currencyFormat = (num) => {
-    return num.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
   };
   return (
     <div className={cx("container")}>

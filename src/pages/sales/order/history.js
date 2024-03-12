@@ -3,7 +3,7 @@ import CustomerLayout from "@/components/Layouts/CustomerLayout";
 import styles from "./history.module.scss";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-
+import { currencyFormat } from "@/currency/currency.module";
 import classNames from "classnames/bind";
 const cx = classNames.bind(styles);
 
@@ -74,11 +74,6 @@ function SalesHistory() {
       ordersAmount: 513000,
     },
   ];
-
-  const currencyFormat = (num) => {
-    return num.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.") + " ₫";
-  };
-
   const router = useRouter();
   const handleOrderDetail = (orderInfor) => {
     const orderObject = JSON.stringify(orderInfor);

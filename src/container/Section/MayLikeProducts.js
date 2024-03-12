@@ -4,6 +4,7 @@ import React from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import { currencyFormat } from "@/currency/currency.module";
 import RatingStarsCourses from "@/components/SVGImg/RatingStarsCoures";
 import { useSelector, useDispatch } from "react-redux";
 import { useState, useEffect } from "react";
@@ -65,10 +66,10 @@ function MayLikeProducts() {
     }
   };
 
-  useEffect(() => {
-    componentDidMount();
-    return () => componentDidMount();
-  }, [prosList1.length === 0, prosList2.length === 0, prosList3.length === 0]);
+  // useEffect(() => {
+  //   componentDidMount();
+  //   return () => componentDidMount();
+  // }, [prosList1.length === 0, prosList2.length === 0, prosList3.length === 0]);
 
   useEffect(() => {
     try {
@@ -86,10 +87,6 @@ function MayLikeProducts() {
       console.log(error);
     }
   }, [mapStateToProps.mayLikeProsArr]);
-
-  const currencyFormat = (num) => {
-    return num.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.") + " ₫";
-  };
 
   let settings = {
     dots: false,

@@ -3,6 +3,9 @@ import classNames from "classnames/bind";
 import Modal from "react-modal";
 import styles from "./cart.module.scss";
 import CartDelivery from "@/container/Cart/CartDelivery";
+import { handleDeleteProduct } from "@/controllers/CartController";
+import { currencyFormat } from "@/currency/currency.module";
+
 import Promotion from "@/container/Cart/Promotion";
 import { useRouter } from "next/router";
 import { useDispatch, useSelector } from "react-redux";
@@ -10,14 +13,13 @@ import {
   renderCartProducts,
   increaseProduct,
   decreaseProduct,
-  deleteCartItem,
 } from "@/redux/slice/cartReducer";
 const cx = classNames.bind(styles);
 function Cart() {
+  const cartController = useSelector((state) => state.cartController);
+
   const router = useRouter();
-
   // Calculate the total number of products in the shopping cart
-
   const [allProducts, setAllProducts] = useState(0);
   useEffect(() => {
     let sumProducts = 0;
@@ -56,10 +58,46 @@ function Cart() {
     componentDidMount();
   }, []);
 
+  const cartListItem = [
+    {
+      shop: "Tiki-trading",
+      list_cartItem: [
+        {
+          productImage:
+            "https://salt.tikicdn.com/cache/750x750/media/catalog/producttmp/25/11/89/b6b8a8f3924cd99484ca0c16ad4b9b7d.png",
+          productName:
+            "Điện thoại Xiaomi Redmi 9A (2GB/32GB) - Hàng chính hãng",
+          option: "Xám",
+          giao_thu: "Giao thứ 2, 15/01",
+          productSalePrice: 1790000,
+          quantity: 3,
+          inventory: 10,
+          product_id: 10,
+          productAmount: 5370000,
+          cartItem_id: 1,
+        },
+        {
+          productImage:
+            "https://salt.tikicdn.com/cache/w160/ts/product/99/86/04/0dc97405d243042a84b2c96768fe0e38.png",
+          productName: "iPhone 15 Pro Max 256GB Titan Xanh",
+          option: "Xanh",
+          giao_thu: "Giao thứ 2, 15/01",
+          productSalePrice: 32490000,
+          quantity: 1,
+          inventory: 5,
+          product_id: 11,
+          productAmount: 32490000,
+          cartItem_id: 2,
+        },
+      ],
+    },
+  ];
+
   useEffect(() => {
     try {
       if (mapStateToProps.cartProductsArr !== null) {
-        setCart(mapStateToProps.cartProductsArr);
+        // setCart(mapStateToProps.cartProductsArr);
+        setCart(cartListItem);
       }
     } catch (error) {
       console.log(error);
@@ -225,10 +263,6 @@ function Cart() {
     }
   };
 
-  const currencyFormat = (num) => {
-    return num.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.") + " ₫";
-  };
-
   const getArrChecked = () => {
     return [...arrChecked];
   };
@@ -251,9 +285,9 @@ function Cart() {
   };
 
   //Hanlde delete product
-  const handleDeleteProduct = (cartItemId) => {
-    dispatch(deleteCartItem(cartItemId));
-  };
+  // const handleDeleteProduct = (cartItemId) => {
+  //   cartController.handleDeleteProduct(cartItemId);
+  // };
 
   const customStyles = {
     content: {
@@ -487,7 +521,9 @@ function Cart() {
                               alt="deleted"
                               className={cx("deleteBtn")}
                               onClick={() =>
-                                handleDeleteProduct(productItem.cartItem_id)
+                                cartController.handleDeleteProduct(
+                                  productItem.cartItem_id
+                                )
                               }
                             />
                           </div>

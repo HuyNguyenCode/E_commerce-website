@@ -12,6 +12,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from "next/router";
 import { addCartItem } from "@/redux/slice/cartReducer";
 import { renderShopInfor } from "@/redux/slice/sellerReducer";
+import { currencyFormat } from "@/currency/currency.module";
 import { renderProductsCategory } from "@/redux/slice/categoryReducer";
 const cx = classNames.bind(styles);
 
@@ -42,9 +43,6 @@ export default function ProductPage() {
     speed: 500,
     slidesToShow: 6,
     slidestoscroll: 1,
-  };
-  const currencyFormat = (num) => {
-    return num.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.") + " ₫";
   };
 
   useEffect(() => {

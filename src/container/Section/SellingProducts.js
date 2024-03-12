@@ -3,6 +3,7 @@ import styles from "./Section.module.scss";
 import React from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { currencyFormat } from "@/currency/currency.module";
 import Slider from "react-slick";
 import RatingStarsCourses from "@/components/SVGImg/RatingStarsCoures";
 import { useSelector, useDispatch } from "react-redux";
@@ -65,10 +66,10 @@ function SellingProducts() {
     }
   };
 
-  useEffect(() => {
-    componentDidMount();
-    return () => componentDidMount();
-  }, [prosList1.length === 0, prosList2.length === 0, prosList3.length === 0]);
+  // useEffect(() => {
+  //   componentDidMount();
+  //   return () => componentDidMount();
+  // }, [prosList1.length === 0, prosList2.length === 0, prosList3.length === 0]);
 
   useEffect(() => {
     try {
@@ -97,9 +98,6 @@ function SellingProducts() {
   const [state, showState] = useState(1);
   const handleChangeState = (value) => {
     showState(value);
-  };
-  const currencyFormat = (num) => {
-    return num.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.") + " ₫";
   };
   const router = useRouter();
   const handleClickPros = (productId) => {
